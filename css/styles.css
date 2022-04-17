@@ -1,0 +1,104 @@
+/* 1. General Properties */
+/* 2. Typography */
+/* 3. Card Block */
+/* 4. Header Block */
+/* 5. Footer Block */
+/* 6. Media Queries */
+
+/* General Properties */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* Typography */
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+/* Card Block */
+
+.card {
+	font-weight: 600;
+	font-size: 2rem;
+
+	max-width: 500px;
+	margin: 7rem;
+
+	border-radius: 30px;
+	box-shadow: 0 0 20px 30px #f9f9f9;
+
+	transform: rotate(-5deg);
+	transition: transform 0.2s;
+
+	overflow: hidden;
+}
+
+.card:hover {
+	transform: rotate(0);
+}
+
+.card:hover .avatar {
+	transform: scale(1.15);
+}
+
+/* Header Block */
+
+.header {
+	background-color: #fff;
+}
+
+/* Footer Block */
+
+.footer {
+	display: flex;
+	align-items: center;
+
+	background: rgb(92, 191, 187);
+	/* for old browsers */
+	background: linear-gradient(90deg, rgba(92, 191, 187, 1) 0%, rgba(116, 120, 214, 1) 100%);
+	color: white;
+	font-weight: bold;
+}
+
+.header,
+.footer {
+	padding: 2rem;
+}
+
+.avatar {
+	width: 65px;
+	margin: 0 1.5rem;
+
+	border: 4px solid white;
+	border-radius: 100%;
+	transition: transform 0.3s;
+}
+
+.text {
+	margin: 0;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+	.header {
+		padding: 4rem;
+	}
+
+	.footer {
+		padding: 2rem 4rem;
+	}
+}
